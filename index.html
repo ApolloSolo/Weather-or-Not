@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Weather or Not</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    </head>
+    <body>
+
+        <div class="main-container">
+            <h1>Weather or Not</h1>
+
+            <div class="weather-container">
+                <form id="form" class="weather-form">
+                    <label class="text" for="city">City</label>
+                    <input class="text" type="text" id="city" name="city" placeholder="Omaha">
+                    <label class="text" for="country">Country</label>
+                    <select class="text" id="country">
+                        <option value="AF">Afghanistan</option>
+                        <option value="AR">Argentina</option>
+                        <option value="AU">Australia</option>
+                        <option value="BR">Brazil</option>
+                        <option value="CA">Canada</option>
+                        <option value="CL">Chile</option>
+                        <option value="CN">China</option>
+                        <option value="DO">Dominican Republic</option>
+                        <option value="EG">Egypt</option>
+                        <option value="SV">El Salvador</option>
+                        <option value="FR">France</option>
+                        <option value="DE">Germany</option>
+                        <option value="HT">Haiti</option>
+                        <option value="HK">Hong Kong</option>
+                        <option value="IN">India</option>
+                        <option value="IT">Italy</option>
+                        <option value="JP">Japan</option>
+                        <option value="KE">Kenya</option>
+                        <option value="LB">Lebanon</option>
+                        <option value="LT">Lithuania</option>
+                        <option value="MG">Madagascar</option>
+                        <option value="MX">Mexico</option>
+                        <option value="MA">Morocco</option>
+                        <option value="NP">Nepal</option>
+                        <option value="NL">Netherlands</option>
+                        <option value="PG">Papua New Guinea</option>
+                        <option value="PH">Philippines</option>
+                        <option value="RU">Russia</option>
+                        <option value="SA">Saudi Arabia</option>
+                        <option value="SG">Singapore</option>
+                        <option value="SK">Slovakia</option>
+                        <option value="ZA">South Africa</option>
+                        <option value="SE">Sweden</option>
+                        <option value="TH">Thailand</option>
+                        <option value="AE">United Arab Emirates</option>
+                        <option value="GB">United Kingdom</option>
+                        <option value="US" selected>United States</option>
+                        <option value="VE">Venezuela</option>
+                        <option value="ZW">Zimbabwe</option>
+                    </select>
+                    <button class="btn">Search</button>
+                </form>
+            </div>
+            <div class="weather-data">
+               
+                
+                
+            </div>
+        </div>
+        
+        <script src="app.js" async defer></script>
+    </body>
+</html>

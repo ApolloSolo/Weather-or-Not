@@ -84,6 +84,7 @@ h1{
       height: fit-content;
   }
 
+<<<<<<< HEAD
   .btn:active {
     background-color: yellow;
   }
@@ -92,3 +93,8 @@ h1{
     border: none;
     border-radius: 5px;
 }
+=======
+.btn:active {
+    background-color: yellow;
+  }
+>>>>>>> e866036f4fd18e35f22abfaa4eddce128811b113

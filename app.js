@@ -1,22 +1,41 @@
 const form = document.querySelector('#form');
-
 const weatherContainer = document.querySelector('.flex-row');
+const randNum = () => Math.random();
+
+const makeJoke = async () => {
+    const config = { headers: {Accept: 'application/json'} } 
+    const jokeData = await axios.get('https://icanhazdadjoke.com/', config);
+    return jokeData.data.joke;
+}
+
+const clearContainer = () => {
+    if(weatherContainer.childElementCount > 0){
+        while (weatherContainer.firstChild) {
+            weatherContainer.removeChild(weatherContainer.firstChild);
+          }
+    }
+}
+
+const postJoke = async () => {
+    clearContainer();
+    const p = document.createElement('p');
+    const jokeText = await makeJoke();
+    p.innerText = jokeText;
+    weatherContainer.append(p);
+}
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
+    let num = randNum();
     const city = form.children[1].value;
     const country = form.children[3].value;
     console.log(city + country)
 
     const weatherData = async () => {
         try{
-            if(weatherContainer.childElementCount > 0){
-                while (weatherContainer.firstChild) {
-                    weatherContainer.removeChild(weatherContainer.firstChild);
-                  }
-            }
+            clearContainer();
         
-            makeDiv("left")
+            makeDiv("left");
             makeDiv('right');
 
             const weatherLeft = document.querySelector('.left');
@@ -33,11 +52,16 @@ form.addEventListener('submit', (e) => {
             console.log(weatherData)
         }
         catch(e){
-            console.log(e);
+            alert('That may not be how you spell it')
         }
     }
-
-    weatherData();
+    if(num > .5){
+        weatherData(); 
+    }
+    else{
+        postJoke();
+    }
+    
 })
 
 function makePtag (data, container, str, str2) {
@@ -52,4 +76,3 @@ function makeDiv (cl) {
     d.classList.add(cl)
     weatherContainer.append(d);
 }
-

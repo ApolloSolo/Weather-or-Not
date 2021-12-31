@@ -86,3 +86,7 @@ h1{
       display: flex;
       height: fit-content;
   }
+
+.btn:active {
+    background-color: yellow;
+  }

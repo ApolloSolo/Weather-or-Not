@@ -22,7 +22,7 @@ form.addEventListener('submit', (e) => {
             const weatherLeft = document.querySelector('.left');
             const weatherRight = document.querySelector('.right');
 
-            const data = await axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&units=imperial&appid=c20b708b2952fc5492619c70affe0677`);
+            const data = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&units=imperial&appid=c20b708b2952fc5492619c70affe0677`);
             const weatherData = data.data;
             makePtag(weatherData.main.temp, weatherLeft, 'Current Temp: ', ' F');
             makePtag(weatherData.main.temp_max, weatherLeft, 'High: ', ' F');

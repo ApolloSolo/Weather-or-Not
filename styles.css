@@ -91,3 +91,16 @@ h1{
     border: none;
     border-radius: 5px;
 }
+
+@media screen and (orientation:portrait) {
+    h1{
+        padding: 1rem;
+    }
+
+    .weather-data p {
+        margin: 2px 0;
+        height: 2rem;
+        font-weight: 800;
+        font-size: 1rem;
+    }
+ }

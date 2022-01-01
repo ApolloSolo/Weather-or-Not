@@ -43,12 +43,12 @@ form.addEventListener('submit', (e) => {
 
             const data = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&units=imperial&appid=c20b708b2952fc5492619c70affe0677`);
             const weatherData = data.data;
-            makePtag(weatherData.main.temp, weatherLeft, 'Current Temp: ', ' F');
+            makePtag(weatherData.main.temp, weatherLeft, 'Temp: ', ' F');
             makePtag(weatherData.main.temp_max, weatherLeft, 'High: ', ' F');
             makePtag(weatherData.main.temp_min, weatherLeft, 'Low: ', ' F');
-            makePtag(weatherData.wind.speed, weatherRight, 'Wind ', ' MPH');
-            makePtag(weatherData.main.humidity, weatherRight, 'Humidity ', ' %');
-            makePtag(weatherData.weather[0].description, weatherRight, '', '');
+            makePtag(weatherData.wind.speed, weatherRight, 'Wind: ', ' MPH');
+            makePtag(weatherData.main.humidity, weatherRight, 'Humidity: ', '%');
+            makePtag(weatherData.weather[0].description.slice(1), weatherRight, weatherData.weather[0].description[0].toUpperCase(), '');
             console.log(weatherData)
         }
         catch(e){
